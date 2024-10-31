@@ -11,8 +11,10 @@ const Header = () => {
 
     return ( 
         <div className="w-screen h-[13vh] bg-gray-950 flex flex-row justify-start items-center sm:h-[10vh] md:h-[11vh] lg:h-[12vh] xl:h-[13vh]">
-            <Link href="/" className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold w-[20%] h-full flex justify-center items-center ml-[3%] sm:ml-[5%] md:ml-[10%] lg:ml-[15%]">
-                <span className="text-yellow-300">Turkey</span> <span>Expert</span>
+            <Link href="/" className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold w-[20%] h-full flex justify-start items-center ml-[3%] sm:ml-[5%] md:ml-[10%] lg:ml-[15%]">
+                <h1 className="text-wrap sm:text-wrap md:text-wrap lg:text-nowrap xl:text-nowrap whitespace-normal">
+                    <span className="text-yellow-300">Turkey</span>Expert
+                </h1>
             </Link>
 
             <div className="w-[40%] h-full flex justify-center items-center sm:w-[45%] md:w-[40%] lg:w-[35%] xl:w-[30%]">
