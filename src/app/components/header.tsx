@@ -2,7 +2,7 @@
 
 import { UserButton, useUser } from "@clerk/nextjs";
 import { faHeart, faUser } from "@fortawesome/free-regular-svg-icons";
-import { faCartShopping, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faBurger, faCartShopping, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 
@@ -28,17 +28,17 @@ const Header = () => {
                 </button>
             </div>
 
-            <div className="w-[40%] h-full sm:w-[45%] md:w-[40%] lg:w-[35%] xl:w-[30%] sm:flex md:hidden lg:hidden xl:hidden 2xl:hidden flex"></div>
+            <div className="w-[40%] h-full sm:w-[20%]  sm:flex md:hidden lg:hidden xl:hidden 2xl:hidden flex"></div>
 
 
-            <div className="w-[40%] h-full flex justify-evenly items-center sm:w-[12%] md:w-[10%] lg:w-[8%] xl:w-[6%]">
-                <Link href="/favourites">
-                    <FontAwesomeIcon icon={faHeart} className="text-yellow-300 w-8 h-8 "/>
-                </Link>
-                <Link href="/checkout">
-                    <FontAwesomeIcon icon={faCartShopping} className="text-yellow-300 w-8 h-8 "/>
-                </Link>
-                <div className=" border-l border-gray-400  mx-2 h-0 sm:h-6 md:h-7 lg:h-8 xl:h-10"></div>
+            <div className="w-[20%] h-full flex justify-evenly items-center lg:w-[15%]">
+                    <Link href="/favourites">
+                        <FontAwesomeIcon icon={faHeart} className="text-yellow-300 w-8 h-8 "/>
+                    </Link>
+                    <Link href="/checkout">
+                        <FontAwesomeIcon icon={faCartShopping} className="text-yellow-300 w-8 h-8 "/>
+                    </Link>
+                <div className=" border-l border-gray-400  mx-2 h-0 hidden sm:flex md:flex lg:flex 2xl:flex sm:h-6 md:h-7 lg:h-8 xl:h-10"></div>
 
                 {user ? (
                             <UserButton
@@ -61,8 +61,10 @@ const Header = () => {
                             </Link>
                         )}
             </div>
-
-
+            <div className="w-[20%] flex justify-end items-center sm:flex md:hidden lg:hidden xl:hidden 2xl:hidden">
+                <FontAwesomeIcon icon={faBars} className="text-yellow-300 w-10 h-10 cursor-pointer mr-[5%]"/>
+            </div>
+            
         </div>
     );
 }
